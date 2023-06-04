@@ -131,21 +131,21 @@ useEffect(() => {
           {
             info.map((item,index)=>(
                 <div className='child' key={item.id}>
-                    <img src={`https://picsum.photos/200?random=${item.id}`} onClick={()=>nextPage(item)} id="img" style={{maxWidth:"325px",height:"325px",borderRadius: "20px 20px 0px 0px",cursor:"pointer"}}></img>
+                    <img src={`https://picsum.photos/200?random=${item.id}`} onClick={()=>nextPage(item)} id="img" style={{maxWidth:"290px",height:"290px",borderRadius: "20px 20px 0px 0px",cursor:"pointer"}}></img>
                    <p> UserId : { item.userId}</p>
                    {
-                    item.title.length>30 ?(
+                    item.title.length>20 ?(
                         
-                            <p>Title : { item.title.slice(0,30)}....</p>
+                            <p>Title : { item.title.slice(0,20)}....</p>
                         
                     ):(
                         <p>Title : { item.title} </p> 
                     )
                    }
                    {
-                    item.body.length>60 ?(
+                    item.body.length>50 ?(
                         
-                            <p>Body : { item.body.slice(0,60)}  <p style={{marginTop:"2px",marginLeft:"0px",paddingLeft:"0px",color:"blue",cursor:"pointer"}} onClick={()=>linkClick(item)} >Read More....</p></p>
+                            <p>Body : { item.body.slice(0,50)}  <p style={{marginTop:"2px",marginLeft:"0px",paddingLeft:"0px",color:"blue",cursor:"pointer"}} onClick={()=>linkClick(item)} >Read More....</p></p>
                         
                     ):(
                         <p>Body : { item.body} </p> 
